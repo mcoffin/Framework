@@ -92,6 +92,7 @@ class Life_Client_Core {
 
     class Civilian {
         file = "core\civilian";
+        class civInteractionMenu {};
         class civLoadout {};
         class civMarkers {};
         class demoChargeTimer {};
@@ -304,6 +305,7 @@ class Life_Client_Core {
         class cellphone {};
         class giveItem {};
         class giveMoney {};
+        class handKey {};
         class keyDrop {};
         class keyGive {};
         class keyMenu {};

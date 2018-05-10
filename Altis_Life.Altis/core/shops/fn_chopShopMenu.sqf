@@ -6,7 +6,7 @@
     Description:
     Opens & initializes the chop shop menu.
 */
-private ["_control","_price","_nearVehicles","_chopMultiplier","_chopable","_nearUnits"];
+private ["_control","_price","_nearVehicles","_chopMultiplier","_chopable","_nearUnits","_sellBtn","_title"];
 if (life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
 if !(playerSide isEqualTo civilian) exitWith {hint localize "STR_NOTF_notAllowed"};
 disableSerialization;
@@ -19,6 +19,12 @@ life_chopShop = _this select 3;
 //Error check
 if (count _nearVehicles isEqualTo 0) exitWith {titleText[localize "STR_Shop_NoVehNear","PLAIN"];};
 if (!(createDialog "Chop_Shop")) exitWith {hint localize "STR_Shop_ChopShopError"};
+
+_sellBtn = CONTROL(39400,39403);
+_sellBtn ctrlSetText localize "STR_Global_Sell";
+_sellBtn buttonSetAction "[] call life_fnc_chopShopSell;";
+_title = CONTROL(39400,39405);
+_title ctrlSetText localize "STR_ChopShop_Title";
 
 _control = CONTROL(39400,39402);
 {

@@ -8181,6 +8181,10 @@
             <Portuguese>Menu de Interação do Jogador</Portuguese>
             <Polish>Menu Interakcji</Polish>
         </Key>
+		<Key ID="STR_pInAct_GiveKey">
+			<Original>Give key</Original>
+			<Spanish>Dar una llave</Spanish>
+		</Key>
         <Key ID="STR_pInAct_PutInCar">
             <Original>Put in vehicle</Original>
             <Czech>Vložíme do vozidla</Czech>
